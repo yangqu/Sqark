@@ -9,7 +9,7 @@ import scala.io.Source
 object MyPercent {
   def main(args:Array[String]): Unit = {
     val file1 = Source.fromFile("E:\\city_building_date.csv")
-    val file2 = Source.fromFile("E:\\线下楼宇数据汇总表.txt", "utf-8")
+    val file2 = Source.fromFile("E:\\xianxialouyuhuizong.txt", "utf-8")
     val set_my = scala.collection.mutable.Set[String]();
     val set_wei = scala.collection.mutable.Set[String]();
     val set_my_city = scala.collection.mutable.Set[String]();
@@ -33,13 +33,5 @@ object MyPercent {
       }
     }
 
-    println("葛维维全量楼宇\t"+set_wei.size)
-    println("曲洋洋全量楼宇\t"+set_my.size)
-    println("全量楼宇比例\t"+set_wei.size.toDouble/set_my.size)
-    println("葛维维上海楼宇\t"+set_wei_city.size)
-    println("曲洋洋上海楼宇\t"+set_my_city.size)
-    println("上海楼宇比例\t"+set_wei_city.size.toDouble/set_my_city.size)
-    println("全量楼宇交集\t"+set_my.&(set_wei).size)
-    println("上海楼宇交集\t"+set_my_city.&(set_my_city).size)
   }
 }

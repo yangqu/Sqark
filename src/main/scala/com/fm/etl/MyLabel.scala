@@ -6,7 +6,7 @@ import scala.collection.mutable._;
 
 object MyLabel {
   def main(args:Array[String]): Unit = {
-    val file = Source.fromFile("E:\\线下楼宇数据汇总表.txt", "utf-8")
+    val file = Source.fromFile("E:\\xianxialouyuhuizong.txt", "utf-8")
     val set = Set[String]();
     val map = HashMap[String, Int]();
 
